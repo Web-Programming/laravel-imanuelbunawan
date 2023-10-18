@@ -4,14 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DosenController extends Controller
+class DosenController extends Controller    //jika --api harus json, kalau --resources harus tipe resource
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+    $data = [
+        ['id' =>1, 'nama' =>'Hocwin Hebert'],
+        ['id' =>2, 'nama' =>'Adrian']
+    ];
+        return $data;
     }
 
     /**

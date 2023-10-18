@@ -11,7 +11,7 @@ class KurikulumController extends Controller
      */
     public function index()
     {
-        //
+        echo "Halaman Index Kurikulum";
     }
 
     /**
@@ -19,7 +19,7 @@ class KurikulumController extends Controller
      */
     public function create()
     {
-        //
+         echo "Halaman create kurikulum";
     }
 
     /**
@@ -35,7 +35,7 @@ class KurikulumController extends Controller
      */
     public function show(string $id)
     {
-        //
+         echo "Halaman show kurikulum dengan id " .$id;
     }
 
     /**
@@ -43,7 +43,7 @@ class KurikulumController extends Controller
      */
     public function edit(string $id)
     {
-        //
+         echo "Halaman edit kurikulum dengan id " .$id;
     }
 
     /**
