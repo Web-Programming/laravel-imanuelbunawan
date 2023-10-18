@@ -67,4 +67,4 @@ Route::get('/fakultas' , function() {
     return view('fakultas.index', compact('fakultas', 'kampus'));
 });
 
-Route::get('/prodi',[ProdiController::class, 'index']);
+Route::get('/prodi',[ProdiController::class, 'index']); 
