@@ -68,31 +68,31 @@ class MahasiswaController extends Controller
     }
     
     public function insertElq() {
-        $mahasiswas = new Mahasiswa;
-        $mahasiswas->npm = '2226250103';
-        $mahasiswas->nama = 'Alvin Hujaya';
-        $mahasiswas->tempat_lahir = 'Palembang';
-        $mahasiswas->tanggal_lahir = '2004-10-02';
-        $mahasiswas->save();
+        $mahasiswa = new Mahasiswa;
+        $mahasiswa->npm = '2226250103';
+        $mahasiswa->nama = 'Alvin Hujaya';
+        $mahasiswa->tempat_lahir = 'Palembang';
+        $mahasiswa->tanggal_lahir = '2004-10-02';
+        $mahasiswa->save();
         dumb($mahasiswa);
     }
 
     public function updateElq() {
-        $mahasiswas = Mahasiswa::where('npm', '2226250103')->first();
-        $mahasiswas->nama = 'Kevin';
-        $mahasiswas->save();
+        $mahasiswa = Mahasiswa::where('npm', '2226250103')->first();
+        $mahasiswa->nama = 'Kevin';
+        $mahasiswa->save();
         dumb($mahasiswa);
     }
 
     public function deleteElq() {
         $result = Mahasiswa::where('npm', '2226250103')->first();
-        $mahasiswas->delete();
+        $mahasiswa->delete();
         dumb($mahasiswa);
     }
 
-    public function SelectElq() {
+    public function selectElq() {
         $kampus = "Universitas Multi Data Palembang";
-        $mahasiswas = $mahasiswas::all();
+        $mahasiswas = $mahasiswa::all();
         return view('mahasiswa.index', ['allmahasiswa' => $mahasiswas, 'kampus' => $kampus]);
     }
 }
