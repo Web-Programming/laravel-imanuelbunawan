@@ -27,15 +27,15 @@ Route::get("/profil", function () {
     return view('profile');
 });
 
-Route::get("/mahasiswa{nama}", function ($nama = "Peter") {
+Route::get("/mahasiswa{nama}", function ($nama = "Immanuel") {
     echo "<h1>Halo Nama Saya $nama</h2>";
 });
 
-Route::get("/mahasiswa2{nama?}", function ($nama = "Peter") {
+Route::get("/mahasiswa2{nama?}", function ($nama = "Immanuel") {
     echo "<h1>Halo Nama Saya $nama</h2>";
 });
 
-Route::get("/mahasiswa{nama?}/{pekerjaan?}", function ($nama = "Peter", $pekerjaan = "Mahasiswa") {
+Route::get("/mahasiswa{nama?}/{pekerjaan?}", function ($nama = "Immanuel", $pekerjaan = "Mahasiswa") {
     echo "<h1>Halo Nama Saya $nama. Saya adalah $pekerjaan</h2>";
 });
 
