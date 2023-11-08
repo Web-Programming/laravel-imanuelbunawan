@@ -10,8 +10,8 @@ use App\Models\prodi;
 class ProdiController extends Controller
 {
     public function index() {
-        $kampus = "Universitas Multi Data Palembang";
-        return view('prodi.index')->with('kampus', $kampus);
+        $prodis = Prodi::all();
+        return view('prodi.index')->with('prodis', $prodis);
     }
     public function allJoinFacade() {
         $kampus = "Universitas Multi Data Palembang";
