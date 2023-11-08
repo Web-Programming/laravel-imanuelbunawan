@@ -8,5 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Mahasiswa extends Model
 {
     use HasFactory;
-    protected $table = "mahasiswa";
+
+    //jika nama table berbeda
+
+    protected $table = "mahasiswas";
+
+    //untuk mengatur kolom yang boleh di isi saat mass
+
+    protected $fillable = ['npm', 'nama', 'tempat_lahir', 'tanggal_lahir'];
+
+    protected $guarded = [];
+
+    public function prodi() {
+        return $this->belongsTo('App\Models\Prodi');
+    }
+
 }
