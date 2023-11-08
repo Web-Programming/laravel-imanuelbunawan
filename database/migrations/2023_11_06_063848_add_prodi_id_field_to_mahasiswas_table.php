@@ -12,8 +12,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('mahasiswas', function (Blueprint $table) {
-            $table->foreignId('prodi_id')->after('tanggal_lahir')->constrained()
-                ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('prodi_id')->after('tanggal_lahir')->constrained()->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
@@ -24,7 +23,7 @@ return new class extends Migration
     {
         Schema::table('mahasiswas', function (Blueprint $table) {
             $table->dropForeign('mahasiswas_prodi_id_foreign');
-            $tablee->dropColumn('prodi_id');
+            $table->dropColumn('prodi_id');
             //
         });
     }

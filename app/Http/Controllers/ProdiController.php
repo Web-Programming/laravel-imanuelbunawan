@@ -47,7 +47,7 @@ class ProdiController extends Controller
         $prodi->nama = $validateData['nama'];
         $prodi->save();
 
-        $request->session()->$request->flash()('info', "Data prodi $prodi->nama berhasil disimpan ke database");
-        return redirect()->route('prodi.create');
+        $request->session()->flash('info', "Data prodi $prodi->nama berhasil disimpan ke database");
+        return redirect('prodi/create');
     }
 }
